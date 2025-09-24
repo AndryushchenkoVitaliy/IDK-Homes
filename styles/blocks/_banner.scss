@@ -1,7 +1,7 @@
 @use '../helpers' as *;
 
 .banner {
-    background-image: url(../images/banner-bg.jpg);
+    background-image: url(../../images/banner-bg.jpg);
 
     &__inner {
         padding-block: rem(40);
@@ -72,3 +72,4 @@
     }   
 
 }
+
