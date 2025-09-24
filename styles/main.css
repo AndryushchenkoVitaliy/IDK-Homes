@@ -1167,7 +1167,7 @@ section {
 }
 
 .banner {
-  background-image: url(../../images/banner-bg.jpg);
+  background-image: url(../images/banner-bg.jpg);
 }
 .banner__inner {
   padding-block: 2.5rem;
