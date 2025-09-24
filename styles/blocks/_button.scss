@@ -1,0 +1,32 @@
+@use '../helpers' as *;
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--color-white);
+    white-space: nowrap;
+    border-radius: rem(10);
+
+    @include hover {
+        background-color: transparent;
+    }
+
+    &--blue {
+        background-color: var(--color-blue);
+        border:rem(1) solid var(--color-blue);
+        @include hover {
+            color: var(--color-blue);
+        }
+    }
+
+    &--orange {
+        border:rem(1) solid var(--color-orange);
+        background-color: var(--color-orange);
+        @include hover {
+            color: var(--color-orange);
+        }
+    }
+}

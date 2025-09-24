@@ -1,0 +1,120 @@
+@use '../helpers' as *;
+
+.broken {
+    padding-block: rem(100);
+
+    &__title {
+        text-align: center;
+        margin-bottom: rem(20);
+    }
+    &__description {
+        font-family: 'Oswald';
+        font-weight: 400;
+        font-size: rem(24);
+        text-align: center;
+    }
+    &__form {
+        display: flex;
+        margin-inline: auto;
+        flex-direction: column;
+        max-width: rem(575);
+
+        &-body {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(rem(260), 1fr));
+            column-gap: rem(40);
+            margin-top: rem(40);
+        }
+        &-button {
+            padding: rem(10) rem(30);
+            height: rem(56);
+            width: rem(195);
+            font-size: rem(16);
+            margin-inline: auto;
+            background-color: var(--color-orange);
+            border-color: var(--color-orange);
+        }
+    }
+}
+
+.swiper-broken {
+    position: relative;
+    padding-top: rem(150);
+    margin-bottom: rem(80);
+    @include mobile {
+        padding-top: rem(50);
+        margin-bottom: rem(20);
+    }
+    
+}
+.swiper-wrapper-broken {
+    height: rem(460);
+}
+
+.swiper-slide-broken {
+    min-height: rem(340);
+    display: flex;
+    flex-direction: column;
+    gap: rem(28);
+    width: rem(340);
+}
+
+.swiper-slide-active.swiper-slide-broken {
+        
+    @include tablet-above {
+        transform: scale(1.3);
+        transform-origin: bottom;
+        transition: transform var(--transition);
+        bottom: rem(30);
+    }
+}
+
+.swiper-slide-broken__image {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    min-height: rem(325);
+    position: relative;
+    &::before {
+        position: absolute;
+        bottom: 0;
+        content: '';
+        width: rem(270);
+        aspect-ratio: 1;
+        background-color: var(--color-orange);
+        border-radius: 50%;
+        z-index: -1;
+    }
+   
+}
+.swiper-slide-broken__tag {
+    width: auto;
+    display: inline-block;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: rem(16);
+    font-weight: 700;
+    padding: rem(10) rem(30);
+    color: var(--color-white);
+    text-align: center;
+    border-radius: rem(10);
+    background-color: var(--color-blue);
+    & p {
+        display: inline;
+    }
+    
+    
+}
+
+.swiper-buttons {
+    display: inline-flex;
+}
+.swiper-broken .swiper-buttons {
+    right: 50%;
+    translate: 50%;
+    @include mobile {
+        display: none;
+    }
+}

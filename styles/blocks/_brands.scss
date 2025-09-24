@@ -1,0 +1,44 @@
+@use '../helpers' as *;
+
+.brands {
+    padding-block: fluid(100, 30);
+
+    &__inner {
+        text-align: center;
+    }
+    &__title {
+        color: var(--color-orange);
+        margin-bottom: fluid(40, 20);
+    }
+    &__description {
+        margin-bottom: fluid(100, 30);
+    }
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(rem(230), 1fr));
+        column-gap: rem(90);
+        margin-bottom: fluid(90, 50);
+    }
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__button {
+        padding: rem(12) rem(45);
+        display: inline-flex;
+        align-items: center;
+        column-gap: rem(15);
+        margin-bottom: fluid(60, 30);
+        &:after {
+            content: url(../../icons/arrow-down.svg);
+        }
+        @include hover {
+            background-color: var(--color-orange);
+            color: var(--color-white);
+        }
+    }
+    &__extra {
+        @include fluid-text(20, 16);
+    }
+}

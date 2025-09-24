@@ -1,0 +1,73 @@
+@use '../helpers' as *;
+
+.banner {
+    background-image: url(../../images/banner-bg.jpg);
+
+    &__inner {
+        padding-block: rem(40);
+        display: flex;
+        column-gap: rem(10);
+        row-gap: rem(30);
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: start;
+        @include mobile-s {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+    }
+    &__title {
+        font-family: 'Inter';
+        font-weight: 400;
+        line-height: 1.25;
+        color: var(--color-white);
+        & span {
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+    }
+    &__form {
+        max-width: rem(570);
+        @include mobile-s {
+            width: 100%;
+        }
+
+        &-body {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: rem(50);
+            @include tablet {
+                flex-direction: column;
+            }
+        }
+
+        &-input {
+            margin-left: auto;
+            &:not(:last-of-type) {
+                margin-bottom: rem(20);
+            }
+            &:last-of-type {
+                margin-bottom: rem(40);
+                width: rem(370);
+                @include tablet {
+                    width: rem(260);
+                }
+                @include mobile {
+                    width: 100%;
+                }
+            }
+            @include mobile {
+                width: 100%;
+            }
+        }
+        
+        &-button {
+            padding: rem(12) rem(36);
+            margin-left: auto;
+            @include mobile-s {
+                width: 100%;
+            }
+        }
+    }   
+}

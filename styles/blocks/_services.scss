@@ -1,0 +1,56 @@
+@use '../helpers' as *;
+
+.services {
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        text-align: center;
+        margin-bottom: rem(45);
+    }
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(rem(300), 1fr));
+        margin-bottom: rem(40);
+        gap: rem(40);
+    }
+    &__item {
+        padding: rem(75) rem(23);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: rem(2) solid #205691;
+        @include hover {
+            background-color: #205691;
+
+            .services__item-text,
+            .services__item-title {
+                color: var(--color-white);
+            }
+        }
+
+        &-image {
+            margin-bottom: rem(40);
+            border-radius: rem(10);
+            overflow: hidden;
+        }
+        &-title {
+            font-family: 'OpenSans';
+            line-height: 135%; /* 27/20 */
+            color: var(--color-orange);
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: rem(10);
+        }
+        &-text {
+            font-size: rem(16);
+            text-align: center;
+        }
+    }
+    &__button {
+        margin-inline: auto;
+        padding: rem(12) rem(40);
+    }
+}

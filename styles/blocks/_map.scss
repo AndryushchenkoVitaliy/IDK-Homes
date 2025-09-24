@@ -1,0 +1,20 @@
+@use '../helpers' as *;
+
+.map {
+    padding-block: fluid(100, 30);
+
+    &__inner {
+        text-align: center;
+    }
+    &__title {
+        margin-bottom: rem(20);
+    }
+    &__description {
+        margin-inline: auto;
+        max-width: rem(965);
+        margin-bottom: rem(40);
+    }
+    &__image {
+        border-block: rem(10) solid #205691;
+    }
+}

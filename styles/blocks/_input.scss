@@ -1,0 +1,15 @@
+@use '../helpers' as *;
+
+.input {
+    padding: rem(14);
+    font-size: rem(14);
+    width: rem(260);
+    border-radius: rem(10);
+    border: none;
+    height: rem(48);
+    
+    &::placeholder {
+        font-size: rem(14);
+        color: #484848;
+    }
+}

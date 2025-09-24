@@ -1,0 +1,23 @@
+@use 'normalize';
+@use 'fonts';
+@use 'variables';
+@use 'utils';
+@use 'globals';
+
+@use 'blocks/button';
+@use 'blocks/section-title';
+@use 'blocks/input';
+@use 'blocks/burger-button';
+
+@use 'blocks/header';
+@use 'blocks/hero';
+@use 'blocks/why';
+@use 'blocks/services';
+@use 'blocks/broken';
+@use 'blocks/action';
+@use 'blocks/repair';
+@use 'blocks/brands';
+@use 'blocks/banner';
+@use 'blocks/map';
+@use 'blocks/review';
+@use 'blocks/footer';
